@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme inline {
+  --color-surface: var(--surface);
+}
+
+:root {
+  --surface: #e7e8ea;   /* board background */
+  --dot: #bfc2c7;       /* grid dots */
+  --line: #d2d4d8;      /* grid lines (shown when zoomed in) */
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #2b2c30;
+    --dot: #43464c;
+    --line: #35373c;
+    color-scheme: dark;
+  }
+}
+
+#grid {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none;
+}
