@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+ .px { font-family: 'Press Start 2P', ui-monospace, monospace; }
+.ts { text-shadow: 2px 2px 0 rgba(0, 0, 0, .55); }
+#game { image-rendering: pixelated; }

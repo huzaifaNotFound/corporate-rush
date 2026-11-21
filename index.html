@@ -4,9 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Corporate Rush</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body class="bg-surface overflow-hidden">
-  <canvas id="grid" class=" cursor-grab"></canvas>
-  <script type="module" src="src/main.js"></script>
+<body class="px min-h-screen bg-slate-900 text-white flex items-center justify-center p-3">
+
+  <div id="wrap" class="relative w-full max-w-3xl overflow-hidden rounded-lg border-4 border-slate-700 select-none cursor-pointer" style="touch-action:manipulation">
+    <canvas id="game" width="720" height="260" class="block w-full"></canvas>
+
+    <div class="absolute top-2 right-3 text-right ts text-[10px] sm:text-xs leading-5">
+      <div>HI <span id="best">00000</span></div>
+      <div id="score">00000</div>
+    </div>
+
+    <div id="ov" class="absolute inset-0 flex flex-col items-center justify-center text-center bg-black/55 px-4">
+      <h1 id="ttl" class="text-xl sm:text-4xl text-yellow-300 ts">CORPORATE RUSH</h1>
+      <p id="msg" class="mt-4 text-[10px] sm:text-xs leading-5"></p>
+      <p class="mt-5 text-[10px] sm:text-xs text-sky-200">PRESS SPACE OR TAP</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
